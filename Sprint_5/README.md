@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# Sprint_5
+=======
 # Проект: Тестирование Stellar Burgers
 
 ## Описание
@@ -67,3 +70,4 @@ Selenium
 Webdriver Manager
 pytest
 Google Chrome
+>>>>>>> e75c8a5 (first commit)
