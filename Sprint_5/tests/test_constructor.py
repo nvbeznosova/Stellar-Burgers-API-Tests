@@ -1,18 +1,17 @@
 import pytest
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
 from locators.constructor_page_locators import ConstructorPageLocators
+from urls import BASE_URL
 
-@pytest.fixture
-def driver():
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-    driver.maximize_window()
-    yield driver
-    driver.quit()
+tabs = [
+    (ConstructorPageLocators.BUNS_TAB, ConstructorPageLocators.BUNS_TAB_ACTIVE),
+    (ConstructorPageLocators.SAUCES_TAB, ConstructorPageLocators.SAUCES_TAB_ACTIVE),
+    (ConstructorPageLocators.FILLINGS_TAB, ConstructorPageLocators.FILLINGS_TAB_ACTIVE),
+]
 
-def test_constructor_tabs(driver):
-    driver.get("https://stellarburgers.nomoreparties.site/")
-    driver.find_element(*ConstructorPageLocators.BUNS_TAB).click()
-    driver.find_element(*ConstructorPageLocators.SAUCES_TAB).click()
-    driver.find_element(*ConstructorPageLocators.FILLINGS_TAB).click()
+class TestConstructorTabs:
+
+    @pytest.mark.parametrize("tab_locator,active_locator", tabs)
+    def test_tab(self, driver, tab_locator, active_locator):
+        driver.get(BASE_URL)
+        driver.find_element(*tab_locator).click()
+        assert driver.find_element(*active_locator).is_displayed()

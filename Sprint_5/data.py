@@ -1,0 +1,2 @@
+EXISTING_USER_EMAIL = "nadia_beznosova_31_123@yandex.ru"
+EXISTING_USER_PASSWORD = "12345679"
