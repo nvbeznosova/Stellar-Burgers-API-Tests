@@ -67,13 +67,13 @@ Stellar-Burgers-API-Tests/
 ### Installation
 
 1. **Clone the repository**
-   ```bash
+```bash
    git clone https://github.com/nvbeznosova/Stellar-Burgers-API-Tests.git
    cd Stellar-Burgers-API-Tests
    ```
 
 2.  **Create and activate a virtual environment** 
-   ```bash
+```bash
    python -m venv .venv
    source .venv/bin/activate   # On macOS/Linux
    # .venv\Scripts\activate    # On Windows
