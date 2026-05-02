@@ -5,6 +5,8 @@
 [![requests](https://img.shields.io/badge/requests-2.31+-green.svg)](https://docs.python-requests.org/)
 [![Allure](https://img.shields.io/badge/Allure-2.13-purple.svg)](https://docs.qameta.io/allure/)
 
+> **📘 API Documentation:** [Stellar Burgers API Spec](https://code.s3.yandex.net/qa-automation-engineer/python-full/diploma/Api-Stellar_Burgers.pdf)
+
 Automated API tests for [Stellar Burgers](https://stellarburgers.nomoreparties.site/) — a burger constructor service.  
 The project covers user creation, login, and order placement endpoints.
 
